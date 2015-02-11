@@ -9,7 +9,7 @@
         </div>
         <div class="panel-body">
           by <%= blog_post.author %><br />
-          <p><span class="posted-at"><%= comment.created_at.strftime ('%m/%d/%Y %H:%M:%S') %></span></p>
+          <p><span class="posted-at"><%= blog_post.created_at.strftime ('%m/%d/%Y %H:%M:%S') %></span></p> -->
           <p><%= blog_post.blog_entry[0...250] %>...[<%= link_to "READ MORE", blog_post %>]</p>
         </div>  
         <div class="panel-footer">
@@ -24,4 +24,8 @@
 
 <br>
 
-<%= link_to 'New Blog post', new_blog_post_path %>
+<div class="panel-footer"> 
+<%= link_to 'New Blog post', new_blog_post_path, class: "btn btn-danger" %>
+</div>
+
+
